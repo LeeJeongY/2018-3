@@ -1,23 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import = "exBean.studentVO" %>
+<%@ page import = "exBean.studentDAO" %>
 <html>
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 
-<jsp:useBean id="item" scope="page" class="exBean.studentVO">
-
- <jsp:setProperty name="item" property="no"/>
-
- <jsp:setProperty name="item" property="name"/>
-
- <!--<jsp:setProperty name="item" property="*"/>-->
-
-</jsp:useBean>
-
-<jsp:useBean id="dao" scope="page" class="exBean.studentDAO"/>
-
 </html>
 <%
  request.setCharacterEncoding("UTF-8");
+ studentVO item = new studentVO(); //사용자 객체 생성
+
+ item.setNo(request.getParameter("no"));
+ item.setName(request.getParameter("name"));
+ studentDAO dao = new studentDAO(); //사용자 객체 생성
  dao.insertStudent(item);
+ response.sendRedirect("read.jsp");
+ 
 %>
