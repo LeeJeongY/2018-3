@@ -1,4 +1,4 @@
-package exBean;
+package exActionTag;
 import java.sql.*;
 import java.util.*;
 public class studentDAO {
@@ -17,10 +17,12 @@ public class studentDAO {
   pstmt.setString(2,name);
   pstmt.executeUpdate();
 
+ 
+
   pstmt.close();
+
   conn.close();
  }
- 
  public List<studentVO> selectStudent() throws Exception { //List에 record set을 담아 넘겨 준다
 
 	   List<studentVO> items = new ArrayList<studentVO>();
@@ -33,8 +35,8 @@ public class studentDAO {
 	   while(rs.next()) {
 
 		   studentVO item = new studentVO();
-		   item.setNo(rs.getString("no"));
-		   item.setName(rs.getString("name"));
+		   item.setNo(rs.getString("no")); //번호 불러오기
+		   item.setName(rs.getString("name")); // 이름 불러오기
 		  // 가져온 레코드 값 리스트에 세트
 
 		   items.add(item);
@@ -46,4 +48,3 @@ public class studentDAO {
 	 }
 
 }
-
