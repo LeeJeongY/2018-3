@@ -11,7 +11,8 @@ import kr.ac.dit.service.BoardService;
 @Controller
 public class BoardController {
 	@Autowired
-	private BoardService boardService;
+	BoardService boardService;
+	
 	 @RequestMapping("/board/list")
 	 public void listGET(Model model) throws Exception {
 	  model.addAttribute("items", boardService.listArticle());
