@@ -1,5 +1,4 @@
 package kr.ac.dit.domain;
-
 public class MemberVO {
 	 private String id;
 	 private String pwd;

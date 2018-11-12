@@ -1,7 +1,5 @@
 package kr.ac.dit.domain;
-
 import java.sql.Timestamp;
-
 public class BoardVO {
 	 private int no;
 	 private String writer;

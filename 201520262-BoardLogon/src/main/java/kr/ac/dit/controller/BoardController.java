@@ -5,14 +5,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import kr.ac.dit.domain.BoardVO;
 import kr.ac.dit.service.BoardService;
 @Controller
 public class BoardController {
 	@Autowired
-	BoardService boardService;
-	
+	private BoardService boardService;
 	 @RequestMapping("/board/list")
 	 public void listGET(Model model) throws Exception {
 	  model.addAttribute("items", boardService.listArticle());

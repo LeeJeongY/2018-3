@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="exBean">
+    <wb-module deploy-name="201520262-exBean">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="exBean"/>
-        <property name="java-output-path" value="/exBean/build/classes"/>
+        <property name="java-output-path" value="/201520262-exBean/build/classes"/>
+        <property name="context-root" value="201520262-exBean"/>
     </wb-module>
 </project-modules>
